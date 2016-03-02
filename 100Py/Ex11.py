@@ -1,0 +1,17 @@
+"""
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether
+they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+Example:
+0100,0011,1010,1001
+Then the output should be:
+1010
+"""
+
+output = []
+user_in = raw_input("Input comma separated 4 digit binary numbers").split(",")
+for elem in user_in:
+    int_num = int(elem, 2)
+    if not int_num%5:
+        output.append(elem)
+
+print ",".join(output)
