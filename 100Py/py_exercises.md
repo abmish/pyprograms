@@ -366,3 +366,51 @@ Then, the output of the program should be:
 ['2', '3']  
 In case of input data being supplied to the question, it should be assumed to be a console input.  
   
+61)  
+Print a unicode string "hello world".  
+  
+62)  
+Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.  
+  
+63)  
+Write a special comment to indicate a Python source code file is in unicode.  
+  
+64)  
+Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console (n>0).  
+  
+65)  
+Write a program to compute:  
+f(n)=f(n-1)+100 when n>0  
+and f(0)=1  
+with a given n input by console (n>0)  
+  
+66)  
+The Fibonacci Sequence is computed based on the following formula:  
+f(n)=0 if n=0  
+f(n)=1 if n=1  
+f(n)=f(n-1)+f(n-2) if n>1  
+Please write a program to compute the value of f(n) with a given n input by console.  
+  
+67)  
+The Fibonacci Sequence is computed based on the following formula:  
+f(n)=0 if n=0  
+f(n)=1 if n=1  
+f(n)=f(n-1)+f(n-2) if n>1  
+Please write a program using list comprehension to print the Fibonacci Sequence in comma separated form with a given n input by console.  
+Example:  
+If the following n is given as input to the program:  
+7  
+Then, the output of the program should be:  
+0,1,1,2,3,5,8,13  
+  
+68)  
+Please write a program using generator to print the even numbers between 0 and n in comma separated form while n  
+is input by console.  
+  
+69)  
+Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma  
+separated form while n is input by console.  
+  
+70)  
+Please write assert statements to verify that every number in the list [2,4,6,8] is even.  
+  
