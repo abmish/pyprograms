@@ -451,3 +451,38 @@ Please write a program to randomly generate a list with 5 numbers, which are div
 80)  
 Please write a program to randomly print a integer number between 7 and 15 inclusive.  
   
+81)  
+Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".  
+  
+82)  
+Please write a program to print the running time of execution of "1+1" for 100 times.  
+  
+83)  
+Please write a program to shuffle and print the list [3,6,7,8].  
+  
+84)  
+Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"]  
+and the object is in ["Hockey","Football"].  
+  
+85)  
+Please write a program to print the list after removing even numbers in [5,6,77,45,22,12,24].  
+  
+86)  
+By using list comprehension, please write a program to print the list after removing numbers which are divisible  
+by 5 and 7 in [12,24,35,70,88,120,155].  
+  
+87)  
+By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in 
+[12,24,35,70,88,120,155].  
+  
+88)  
+By using list comprehension, please write a program generate a 3*5*8 3D array whose each element is 0.  
+  
+89)  
+By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in  
+[12,24,35,70,88,120,155].  
+  
+90)  
+By using list comprehension, please write a program to print the list after removing the value 24 in  
+[12,24,35,24,88,120,155].  
+  
