@@ -7,6 +7,6 @@ class American(object):
     def print_nationality():
         print "America"
 
-oneAmerican = American()
-oneAmerican.print_nationality()
+one_american = American()
+one_american.print_nationality()
 American.print_nationality()

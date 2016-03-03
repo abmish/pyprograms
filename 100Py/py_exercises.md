@@ -317,3 +317,52 @@ Write a program which can map() to make a list whose elements are square of numb
 50)  
 Define a class named American which has a static method called printNationality.  
   
+51)  
+Define a class named American and its subclass NewYorker.  
+  
+52)  
+Define a class named Circle which can be constructed by a radius. The Circle class has a method which can compute  the area.
+  
+53)  
+Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which  
+can compute the area.  
+  
+54)  
+Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as  
+argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.  
+  
+55)  
+Please raise a RuntimeError exception.  
+  
+56)  
+Write a function to compute 5/0 and use try/except to catch the exceptions.  
+  
+57)  
+Define a custom exception class which takes a string message as attribute.  
+  
+58)  
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the  
+user name of a given email address. Both user names and company names are composed of letters only.  
+If the following email address is given as input to the program:  
+john@google.com  
+Then, the output of the program should be:  
+john  
+  
+59)  
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the  
+company name of a given email address. Both user names and company names are composed of letters only.  
+If the following email address is given as input to the program:  
+john@google.com  
+Then, the output of the program should be:  
+google  
+  
+60)  
+Write a program which accepts a sequence of words separated by whitespace as input to print the words composed of  
+digits only.  
+Example:  
+If the following words is given as input to the program:  
+2 cats and 3 dogs.  
+Then, the output of the program should be:  
+['2', '3']  
+In case of input data being supplied to the question, it should be assumed to be a console input.  
+  
