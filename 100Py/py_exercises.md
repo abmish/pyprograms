@@ -486,3 +486,40 @@ By using list comprehension, please write a program to print the list after remo
 By using list comprehension, please write a program to print the list after removing the value 24 in  
 [12,24,35,24,88,120,155].  
   
+91)  
+With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list whose elements are  
+intersection of the above given lists.  
+  
+92)  
+With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate  
+values with original order reserved.  
+  
+93)  
+Define a class Person and its two child classes: Male and Female. All classes have a method "get_gender" which can print    
+"Male" for Male class and "Female" for Female class.  
+  
+94)  
+Please write a program to count and print the number of times each character occurs in a string input by console.  
+  
+95)  
+Please write a program which accepts a string from console and print it in reverse order.  
+  
+96)  
+Please write a program which accepts a string from console and print the characters that have even indexes.  
+  
+97)  
+Please write a program which prints all permutations of [1,2,3]  
+  
+98)  
+Write a program to solve a classic ancient Chinese puzzle:   
+We count 35 heads and 94 legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have?  
+  
+99)  
+Ask the user for a string and print out whether this string is a palindrome or not.  
+  
+100)  
+Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether  
+they guessed too low, too high, or exactly right.  
+Keep the game going until the user types "exit"  
+Keep track of how many guesses the user has taken, and when the game ends, print this out.  
+  
