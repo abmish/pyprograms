@@ -25,3 +25,10 @@ word or phrase, using all the original letters exactly once; e.g., orchestra = c
 http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that finds the sets of words that share the same  
 characters that contain the most words in them.  
   
+3)  
+For two segments of integer [l1, r1] and [l2, r2]. How many pair (x, y) which l1 <= x <= r1 and l2 <= y <= r2 where x * y divisible by p.  
+Input  
+The first line is integer p (1 <= p <= 10^9)  
+Second line includes l1, r1 separated by a space (1 <= l1 <= r1 <= 10^9).  
+Third line includes l2, r2 separated by a space (1 <= l2 <= r2 <= 10^9).  
+  
