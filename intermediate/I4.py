@@ -21,10 +21,31 @@ porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
 sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
 tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask
 """
-#### draft ####
+
+from collections import defaultdict
+def order_words(words):
+    by_first = defaultdict(set)
+    for word in words:
+        by_first[word[0]].add(word)
+    return by_first
+
+def link_first(by_first, so_far):
+    assert so_far
+    match = so_far[-1][-1]
+    options = by_first[match] - set(so_far)
+    if not options:
+        return so_far
+    else:
+        alternatives = (link_first(by_first, list(so_far) + [word]) for word in options)
+        o_max = max(alternatives, key=len)
+        return o_max
+
+def arrange_words(words):
+    by_first = order_words(words)
+    return max( (link_first(by_first, [word]) for word in words), key= len)
 
 pokemons = ['audino', 'bagon', 'baltoy', 'banette', 'bidoof', 'braviary', 'bronzor', 'carracosta', 'charmeleon',
-            'cresselia', 'croagunk', 'darmanitan', 'deino', 'emboar', 'emolga', 'exeggcute gabite', 'girafarig',
+            'cresselia', 'croagunk', 'darmanitan', 'deino', 'emboar', 'emolga', 'exeggcute', 'gabite', 'girafarig',
             'gulpin', 'haxorus', 'heatmor', 'heatran', 'ivysaur', 'jellicent', 'jumpluff', 'kangaskhan', 'kricketune',
             'landorus', 'ledyba', 'loudred', 'lumineon', 'lunatone', 'machamp', 'magnezone', 'mamoswine', 'nosepass',
             'petilil', 'pidgeotto', 'pikachu', 'pinsir', 'poliwrath', 'poochyena', 'porygon2', 'porygonz', 'registeel',
@@ -32,5 +53,7 @@ pokemons = ['audino', 'bagon', 'baltoy', 'banette', 'bidoof', 'braviary', 'bronz
             'simisear', 'snivy', 'snorlax', 'spoink', 'starly', 'tirtouga', 'trapinch', 'treecko', 'tyrogue', 'vigoroth',
             'vulpix', 'wailord', 'wartortle', 'whismur', 'wingull', 'yamask']
 
-spokes = [s[:1]+ s[-1:] for s in pokemons]
-print spokes
+arrangement = arrange_words(pokemons)
+for i in range(0, len(arrangement), 8):
+    print ' '.join(arrangement[i:i+8])
+print(len(arrangement))
