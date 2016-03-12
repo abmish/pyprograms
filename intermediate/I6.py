@@ -39,19 +39,45 @@ print count
 def is_prime(num):
     for i in range(2, num/2+1):
         if num%i==0:
+            #print '%d not prime' % num
             return False
+    #print '%d prime' % num
     return True
 
+def inc_prod(lst):
+    prod = 1
+    for each in lst:
+        prod = prod * (each +1)
+    return prod
+
 def get_prime_factors(num):
-    lim = num
-    ddict = defaultdict()
+    lim = n_lim = num
+    ddict = defaultdict(int)
     i = 2
-    while not is_prime(lim) and i<=lim:
-        while lim%i==0:
-            n_lim = num/i
-            ddict[i] += 1
+    while not is_prime(n_lim) and i<=n_lim and inc_prod(ddict.values())<=8:
+        while n_lim%i==0:
+            n_lim = n_lim/i
+            #print 'n_lim %d' % n_lim
+            ddict[i] = ddict[i]+1
             lim = n_lim
         i += 1
-    return ddict
+    if n_lim >= 2:
+        ddict[n_lim] += 1
 
-print get_prime_factors(60)
+    if inc_prod(ddict.values())==8:
+        return True
+    return False
+
+max_num = 100000
+count = 0
+for i in range(max_num+1):
+    if get_prime_factors(i):
+        count += 1
+
+print count
+
+#10,0
+#100,10
+#1000,180
+#10000,2114
+#100000,
