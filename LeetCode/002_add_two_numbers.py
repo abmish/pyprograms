@@ -36,7 +36,7 @@ class Solution:
             outl.next, n.next = n, outl.next
         return outl.next
 
-    def add_two_numbers2(self, l1, l2):  # First submission on LeetCode: run time 193 ms
+    def add_two_numbers2(self, l1, l2):  # Second submission on LeetCode: run time 193 ms
         d_head = ListNode(0)
         c = d_head
         carry = 0
@@ -53,10 +53,24 @@ class Solution:
             c.next = ListNode(carry)
         return d_head.next
 
+    def add_two_numbers3(self, l1, l2):  # Third submission on LeetCode: run time 116 ms
+        carry = 0;
+        res = n = ListNode(0);
+        while l1 or l2 or carry:
+            if l1:
+                carry = carry + l1.val;
+                l1 = l1.next;
+            if l2:
+                carry = carry + l2.val;
+                l2 = l2.next;
+            carry, val = divmod(carry, 10);
+            n.next = n = ListNode(val);
+        return res.next;
+
     def addTwoNumbers(self, l1, l2):
         """
         :type l1: ListNode
         :type l2: ListNode
         :rtype: ListNode
         """
-        return self.add_two_numbers2(l1, l2)
+        return self.add_two_numbers3(l1, l2)

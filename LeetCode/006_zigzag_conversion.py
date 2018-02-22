@@ -19,23 +19,22 @@ import itertools
 
 
 def convert(s, numRows):
-    s_len = len(s)
-    out = ""
+    s_len = len(s);
+    out = "";
     if numRows == 1 or s_len in [0, 1, 2]:
         return s
 
     if numRows == 2:
-        out = [s[0::2], s[1::2]]
-        return ''.join(list(itertools.chain(*out)))
+        out = [s[0::2], s[1::2]];
+        return ''.join(list(itertools.chain(*out)));
 
     for i in range(numRows):
-        k = i
+        k = i;
         for j in range(s_len):
             if k >= s_len:
-                break
-            out += s[k]
-            k += 2 * (numRows - i - 1) if ((i == 0 or (j % 2 == 0)) and (i != numRows - 1)) else 2 * i
-
+                break;
+            out += s[k];
+            k += 2 * (numRows - i - 1) if ((i == 0 or (j % 2 == 0)) and (i != numRows - 1)) else 2 * i;
     return out
 
 

@@ -11,13 +11,14 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 """
 
+
 class Solution:
     def two_sum1(self, nums, target):  # First submission on LeetCode: run time 2046 ms
         for num in nums:
             other = target - num
             x = nums.index(num)
-            if other in nums[x+1:]:
-                y = x + nums[x+1:].index(other) + 1
+            if other in nums[x + 1:]:
+                y = x + nums[x + 1:].index(other) + 1
                 return [x, y]
 
     def two_sum2(self, nums, target):  # Second submission on LeetCode: run time 60 ms
@@ -28,7 +29,7 @@ class Solution:
                 return [dict_map[complement], index]
             dict_map[nums[index]] = index
 
-    def two_sum3(self, nums, target): # Third submission on LeetCode: run time 59 ms
+    def two_sum3(self, nums, target):  # Third submission on LeetCode: run time 59 ms
         dict_map = {}
         for index, num in enumerate(nums):
             complement = target - num
@@ -36,10 +37,20 @@ class Solution:
                 return [dict_map[complement], index]
             dict_map[num] = index
 
+    def two_sum4(self, nums, target):  # Fourth submission on LeetCode: run time 40 ms
+        if len(nums) <= 1:
+            return False;
+        a_dict = {};
+        for idx, num in enumerate(nums):
+            complement = target - num;
+            if complement in a_dict.keys():
+                return [a_dict[complement], idx];
+            a_dict[num] = idx;
+
     def two_sum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        return self.two_sum3(self, nums, target)  # calling the best ONE :)
+        return self.two_sum4(self, nums, target)  # calling the best ONE :)
